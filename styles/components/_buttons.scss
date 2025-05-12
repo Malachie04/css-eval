@@ -1,9 +1,23 @@
 @use '../abstracts/_variables' as *;
 
-.btn-blue{
-    background-color: $color-blue-primary;
+.btn{
+    padding: 5px;
+    border-radius: 5px;   
 }
 
+.btn-white{
+    background-color: $color-white;
+    color: $color-blue-light !important;
+}
+
+.btn-blue{
+    background-color: $color-blue-primary;
+    color: $color-white;
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+     font-weight: normal;
+     padding: 5px 10px;
+}
 .iflex-row{
     display: flex;
     flex-direction: row;
@@ -15,19 +29,19 @@
 
 .igrid{
     display: grid;
-    grid-template: repeat(12,1fr);
+    grid-template-columns: repeat(12,1fr);
 }
 .g-big{
-    grid-column: 12;;
+    grid-column: span 12;
 }
 .g-small{
-    grid-column: 6;
+    grid-column: span 6;
 }
 .g-tiny{
-    grid-column: 4;
+    grid-column: span 4;
 }
 .g-very-tiny{
-    grid-column: 3;
+    grid-column: span 3;
 }
 .wrapper{
     max-width: 1200px; 

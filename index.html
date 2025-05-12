@@ -9,11 +9,21 @@
     <title>Index | Home</title>
 </head>
 <body>
-    <header class="wrapper iflex-col">
-        <!-- <video src="./image/iStock-1240812517.mp4" type="mp4" autoplay class="myVideo"></video> -->
+    <header class="iflex-col">
+        <!-- <video src="./image/iStock-1240812517.mp4" type="mp4" autoplay class="myVideo"></video>  -->
         <nav class="header-nav iflex-col">
             <div class="logo-nav iflex-row">
-                <img src="./image/hicks-thomas-logo-white.png" alt="headder-logo"  class="img-logo">
+                <!-- <img src="./image/hicks-thomas-logo-new-blue-mark.png" alt="headder-logo"  class="img-logo"> -->
+                <picture class="img-logo">
+                    <!-- Image desktop (≥ 960px) -->
+                    <source srcset="./image/hicks-thomas-logo-new-white.png" media="(min-width: 960px)" />
+
+                    <!-- Image tablette (≥ 650px et < 960px) -->
+                    <source srcset="./image/hicks-thomas-logo-new-white.png" media="(min-width: 650px)" />
+
+                    <!-- Image mobile (par défaut) -->
+                    <img src="./image/hicks-thomas-logo-new-blue-mark.png" alt="main-top-right-image" class="img-welcome"/>
+                  </picture>
                 <div class="burger-menu">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -26,10 +36,10 @@
                 <a href="#">News</a>
                 <a href="#">Video creators</a>
                 <a href="">Contact</a>
-                <a href=""><img src="./image/loop.png" alt="headder-logo"></a>
+                <a href=""><img src="./image/loop.png" alt="header-logo" class="loop-header"></a>
             </div>
         </nav>
-        <article class="hustle">
+        <article class="hustle wrapper">
             <h1>Hustle Never Sleeps.</h1>
             <p>Houston's relentless pace demands a legal team that never quits. We are around-the-clock advocates, providing unwavering support when you need it most.</p>
             <div class="header-links">
@@ -61,35 +71,43 @@
             <div class="card iflex-col">
                 <div class="card-left iflex-col">
                     <img src="./image/john-Deis-380x380-1.jpg" alt="Lawyer">
-                    <div class="lawyer-name iflex-row">
-                        <p>John Hot</p>
-                    </div>
+                    <p class="lawyer-name">John Hot</p>
                 </div>
-                <article class="card-right">
+                <article class="card-right iflex-col">
                     <div class="main-form-title">
-                        <a href="#">From the Board Room to the Courtroom</a>
+                        <a href="#" class="upper-it">A unique perspective  <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <h2>Houston's Top Litigation Attorneys</h2>
                     <p>
                         How do our clients describe us? They call us sophisticated legal strategists and creative problem solvers, bringing unique perspectives to every case. Our Houston attorneys' diverse experience and proven results offer peace of mind, even in high-stakes situations. We have the resources to handle complex cases while providing personalized attention to your company's needs.
                     </p>
                     <div class="header-links">
-                        <a href="#"><i class="fa-solid fa-play">Meet Our Attorneys</i></a>
+                        <a href="#" class="btn btn-white"><i class="fa-solid fa-play"> Meet Our Attorneys</i></a>
                     </div>
-
                 </article>
             </div>
         </div>
-        <div class="our-work">
+        <div class="our-work wrapper">
             <div class="main-form-title">
-                <a href="#">Our work</a>
+                <a href="#" class="upper-it">Our work <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <article>
+            <article class="ouwer-work-content-top">
                 <h1>A Legacy of Winning</h1>
                 <p>Hicks Thomas LLP is a litigation boutique with extensive expertise across a wide range of industries. We represent both plaintiffs and defendants in business and tort litigation. Our experience includes energy, environmental and toxic torts, antitrust and anti-competitive practices, employment and labor disputes, as well as product liability cases. Since our founding in 1997, we have consistently delivered successful results in complex cases, building a reputation for excellence, efficiency, and outstanding client service.</p>
             </article>
-            <div class="big-card">
-                <div class="sm-card">
+            <div class="big-card igrid">
+                <div class="sm-card g-big">
+                    <div class="sm-card-title ">
+                        <h3>Appellate Litigation</h3>
+                        <p>
+                            Hicks Thomas LLP specializes in appellate litigation, adeptly handling appeals of trial court rulings. Our skilled lawyers anticipate, prepare for, and successfully argue appeals, ensuring favorable outcomes in higher courts.
+                        </p>
+                    </div>
+                    <div class="sm-card-footer">
+                        <i class="fa-solid fa-play">Learn More</i>             
+                    </div>
+                </div>
+                <div class="sm-card g-big">
                     <div class="sm-card-title">
                         <h3>Appellate Litigation</h3>
                         <p>
@@ -100,7 +118,7 @@
                         <i class="fa-solid fa-play">Learn More</i>             
                     </div>
                 </div>
-                <div class="sm-card">
+                <div class="sm-card g-big">
                     <div class="sm-card-title">
                         <h3>Appellate Litigation</h3>
                         <p>
@@ -111,7 +129,7 @@
                         <i class="fa-solid fa-play">Learn More</i>             
                     </div>
                 </div>
-                <div class="sm-card">
+                <div class="sm-card g-big">
                     <div class="sm-card-title">
                         <h3>Appellate Litigation</h3>
                         <p>
@@ -122,7 +140,40 @@
                         <i class="fa-solid fa-play">Learn More</i>             
                     </div>
                 </div>
-                <div class="sm-card last-child">
+                <div class="sm-card g-big">
+                    <div class="sm-card-title">
+                        <h3>Appellate Litigation</h3>
+                        <p>
+                            Hicks Thomas LLP specializes in appellate litigation, adeptly handling appeals of trial court rulings. Our skilled lawyers anticipate, prepare for, and successfully argue appeals, ensuring favorable outcomes in higher courts.
+                        </p>
+                    </div>
+                    <div class="sm-card-footer">
+                        <i class="fa-solid fa-play">Learn More</i>             
+                    </div>
+                </div>
+                <div class="sm-card g-big">
+                    <div class="sm-card-title">
+                        <h3>Appellate Litigation</h3>
+                        <p>
+                            Hicks Thomas LLP specializes in appellate litigation, adeptly handling appeals of trial court rulings. Our skilled lawyers anticipate, prepare for, and successfully argue appeals, ensuring favorable outcomes in higher courts.
+                        </p>
+                    </div>
+                    <div class="sm-card-footer">
+                        <i class="fa-solid fa-play">Learn More</i>             
+                    </div>
+                </div>
+                <div class="sm-card g-big">
+                    <div class="sm-card-title">
+                        <h3>Appellate Litigation</h3>
+                        <p>
+                            Hicks Thomas LLP specializes in appellate litigation, adeptly handling appeals of trial court rulings. Our skilled lawyers anticipate, prepare for, and successfully argue appeals, ensuring favorable outcomes in higher courts.
+                        </p>
+                    </div>
+                    <div class="sm-card-footer">
+                        <i class="fa-solid fa-play">Learn More</i>             
+                    </div>
+                </div>
+                <div class="sm-card g-big last-child">
                     <div class="sm-card-title">
                         <h3>Appellate Litigation</h3>
                         <p>
@@ -136,15 +187,15 @@
             </div>
         </div>
         <div class="main-bottom">
-            <div class="main-bottom-top">
-                <img src="https://www.hicks-thomas.com/wp-content/uploads/2025/04/bestlawfirm-2025_300x273.png" alt="Best Law Firms 2025">
-                <img src="https://www.hicks-thomas.com/wp-content/uploads/2024/06/HBF-LifeFellow.png" alt="Best Law Firms 202">
-                <img src="https://www.hicks-thomas.com/wp-content/uploads/2024/06/Best-Lawyers.png" alt="Best Law Firms 202">
-                <img src="https://www.hicks-thomas.com/wp-content/uploads/2025/04/bestlawfirm-2025_300x273.png" alt="Best Law Firms 2025">
-                <img src="https://www.hicks-thomas.com/wp-content/uploads/2024/06/Super-Lawyers-white.png" alt="Best Law Firms 202">
+            <div class="main-bottom-top iflex-row">
+                <img src="https://www.hicks-thomas.com/wp-content/uploads/2025/04/bestlawfirm-2025_300x273.png" alt="Best Law Firms 2025" class="main-btn-img">
+                <img src="https://www.hicks-thomas.com/wp-content/uploads/2024/06/HBF-LifeFellow.png" alt="Best Law Firms 202" class="main-btn-img">
+                <img src="https://www.hicks-thomas.com/wp-content/uploads/2024/06/Best-Lawyers.png" alt="Best Law Firms 202" class="main-btn-img">
+                <img src="https://www.hicks-thomas.com/wp-content/uploads/2025/04/bestlawfirm-2025_300x273.png" alt="Best Law Firms 2025" class="main-btn-img">
+                <img src="https://www.hicks-thomas.com/wp-content/uploads/2024/06/Super-Lawyers-white.png" alt="Best Law Firms 202" class="main-btn-img">
             </div>
-            <div class="bottom-bottom">
-                <div class="bottom-card">
+            <div class="bottom-bottom iflex-col">
+                <div class="bottom-card iflex-col">
                     <div class="bootom-card-title">
                         <a href="#">
                             <h3>Former Justice Department Litigator Aleza Remis Joins Hicks Thomas</h3>
@@ -159,10 +210,10 @@
                         </p>
                     </div>
                     <div class="bottom-card-footer">
-                        <a href="">Full text</a>
+                        <a href="" class="btn-blue">Full text <i class="fa fa-caret-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="bottom-card">
+                <div class="bottom-card iflex-col">
                     <div class="bootom-card-title">
                         <a href="#">
                             <h3>Former Justice Department Litigator Aleza Remis Joins Hicks Thomas</h3>
@@ -177,10 +228,10 @@
                         </p>
                     </div>
                     <div class="bottom-card-footer">
-                        <a href="">Full text</a>
+                        <a href="" class="btn-blue">Full text <i class="fa fa-caret-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="bottom-card">
+                <div class="bottom-card iflex-col">
                     <div class="bootom-card-title">
                         <a href="#">
                             <h3>Former Justice Department Litigator Aleza Remis Joins Hicks Thomas</h3>
@@ -195,18 +246,18 @@
                         </p>
                     </div>
                     <div class="bottom-card-footer">
-                        <a href="">Full text</a>
+                        <a href="" class="btn-blue">Full text <i class="fa fa-caret-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="wrappere">
-            <div class="footer-logo">
+    <footer class="">
+        <div class="footer-content iflex-col">
+            <div class="footer-logo wrapper">
                 <img src="./image/hicks-thomas-logo-new-white.png" alt="Logo-footer">
             </div>
-            <div class="footer-content">
+            <div class="footer-content iflex-col">
                 <article>
                     <h3>Houston</h3>
                     <div class="footer-art-top">
@@ -218,7 +269,7 @@
                         713-547-9100
                     </div>
                     <div class="footer-art-bottom">
-                        <i class="fa-solid fa-location-dot"></i>Map & Direction
+                        <i class="fa-solid fa-location-dot"></i> Map & Direction
                     </div>
                 </article>
                 <article>
@@ -232,7 +283,7 @@
                         713-547-9100
                     </div>
                     <div class="footer-art-bottom">
-                        <i class="fa-solid fa-location-dot"></i>Map & Direction
+                        <i class="fa-solid fa-location-dot"></i> Map & Direction
                     </div>
                 </article>
                 <article>
@@ -246,7 +297,7 @@
                         713-547-9100
                     </div>
                     <div class="footer-art-bottom">
-                        <i class="fa-solid fa-location-dot"></i>Map & Direction
+                        <i class="fa-solid fa-location-dot"></i> Map & Direction
                     </div>
                 </article>
                 <article>
@@ -260,7 +311,7 @@
                         713-547-9100
                     </div>
                     <div class="footer-art-bottom">
-                        <i class="fa-solid fa-location-dot"></i>Map & Direction
+                        <i class="fa-solid fa-location-dot"></i> Map & Direction
                     </div>
                 </article>
                 <article>
@@ -274,21 +325,21 @@
                         713-547-9100
                     </div>
                     <div class="footer-art-bottom">
-                        <i class="fa-solid fa-location-dot"></i>Map & Direction
+                        <i class="fa-solid fa-location-dot"></i> Map & Direction
                     </div>
                 </article>
             </div>
-            <div class="social-logo">
+            <div class="social-logo iflex-row">
                 <i class="fa-brands fa-square-facebook"></i>
                 <i class="fa-brands fa-square-instagram"></i>
                 <i class="fa-brands fa-linkedin"></i>
                 <i class="fa-brands fa-x-twitter"></i>
                 <i class="fa-brands fa-google"></i>
             </div>
-            <div class="footer-content-bootom">
+            <div class="footer-content-bootom wrapper">
                 UNLESS OTHERWISE NOTED, OUR LAWYERS ARE NOT CERTIFIED BY THE TEXAS BOARD OF LEGAL SPECIALIZATION. The publications contained in this site do not constitute legal advice. Legal advice can only be with knowledge of the clients specific facts. By putting these publications on our website, we do not intend to create a lawyer-client relationship with the user. Materials may not reflect the most current legal developments, verdicts or settlements. This information should in no way be taken as an indication for future results
             </div>
-            <div class="footer-copy-right">
+            <div class="footer-copy-right iflex-col wrapper">
                 <div class="copy-left">
                     © 2025 <a href="#">Hicks Thomas LLP</a> | <a href="#">Privacy Policy</a> | <a href="#">Site Map</a>
                 </div>
@@ -296,12 +347,13 @@
                     <a href="#">Law Firm Website Design </a>by Dan Gilroy Design
                 </div>
             </div>
-            <div class="flootiing-call">
-                Call : <a href="tel">713-547-910</a>
-            </div>
             <div class="flootiing-bongom">
-                <img data-uw-rm-ignore="" class="ui_w" role="presentation" alt="img" src="https://cdn.userway.org/widgetapp/images/body_wh.svg">
+                <span><img data-uw-rm-ignore="" class="ui_w" role="presentation" alt="img" src="https://cdn.userway.org/widgetapp/images/body_wh.svg"></span>
             </div>
+        </div>
+        <div class="flootiing-call">
+            <i class="fa-solid fa-phone-volume"></i>
+            Call : <a href="tel">713-547-910</a>
         </div>
     </footer>
 </body>

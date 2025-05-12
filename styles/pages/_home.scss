@@ -23,13 +23,23 @@ a{
 header{
     height: 100vh;
     background-color: $color-blue-primary;
+    // background-color: chartreuse;
     position: relative;
-
     justify-content:center ;
 
 }
+
+.myVideo{
+    height: 10px;
+    width: 1px;
+    position: relative;
+    z-index: -2;
+}
 .img-logo{
     width: 150px;
+    @include desktop{
+       width: 300px; 
+    }
 }
 
 .fa-solid{
@@ -41,36 +51,51 @@ blockquote{
     color: $color-blue-primary;
     padding: 20px 50px;
     gap: 1rem;
-   
-    // .quote-symbole{
-    //     font-size: 3rem;
-    // }
-
-    
 }
 
 .header-nav{
-    padding: 10px 0;
-
-    
+    padding: 10px;
     position: relative;
-
-    
-
+    position: fixed;
+    top: 0;  
+    width: 100%;
+    background-color: $color-white;
+    z-index: 999;
     .logo-nav{
-        justify-content: space-between; 
-        position: fixed;
-        top: 15px;  
-        left: 30px;
-        right: 30px;
+        justify-content: space-between;   
     }
     .nav-right{
         display: none;
+        @include desktop{
+            display: flex;
+            padding: 0 30px;
+            gap: 2rem;
+            a{
+                color: $color-white;
+            }
+            margin-left: auto;
+            .loop-header{
+                width: 20px;
+            }
+        }
     }
     .hustle{
         align-items: center;
         
     }
+    @include desktop{
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color:$color-blue-light ;
+        .burger-menu{
+            display: none;
+        }
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 .myVideo{
     height: 100%;
@@ -94,23 +119,193 @@ blockquote{
     }
 }
 
+.main-from {
+    @include desktop{
+        flex-direction: row;
+        align-items: center;
+        padding: 50px 0;
+    }
+}
 .unique-perspective{
     background-color: $color-blue-primary;
-    
+    padding-bottom: 30px;
     .card-left{
         position: relative;
-        padding: 50px;
         img{
             border-radius: 50%;
             border: 1rem solid $color-blue-light;
+            margin: 30px 50px 10px 50px;
         }
         .lawyer-name{
             position: absolute;
-            bottom: 90px;
+            bottom: 70px;
+            align-self: center;
             justify-content: center;
-            p{
-                background-color: bisque;
+            background: linear-gradient(90deg,rgba(34, 15, 247, 1) 23%, rgba(27, 12, 199, 1) 41%, rgba(0, 0, 0, 1) 100%);
+            padding: 5px 15px;
+            border-radius: 50px;
+            color: $color-white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+    .card-right{
+        gap: 1rem;
+        padding:0 20px;
+        text-align: center;  
+        h2,p,a{
+            color: $color-white;
+        }
+        a{
+            text-transform: none;
+            font-weight: normal;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
+
+    }
+}
+
+.our-work{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .main-form-title{
+        text-align: center;
+    }
+    .ouwer-work-content-top{
+        text-align: center;
+        padding: 10px 0;
+    }
+    .big-card {
+        gap: 1rem;
+    }
+    .sm-card{
+        background-color: $color-beige;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        padding: 15px;
+        border-radius: 5px;
+        .sm-card-footer{
+            padding: 10px 0;
+            font-size: 0.6rem;
+            color: $color-blue-light;
+            i{
+                letter-spacing: 2px;
             }
         }
+
+        
+        
+    }
+    .sm-card:last-child{
+        background-color: $color-black-primary;
+        color: $color-white;
+        i{
+            color: $color-white; 
+        }
+    }
+}
+
+.main-bottom{
+    background-image: linear-gradient(to bottom, rgba(7, 68, 175, 0.95), rgba(7, 68, 175, 0.75)), url(../../image/shutterstock_2314958033.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-bottom-top{
+    background-color: $color-blue-primary;
+    justify-content: center;
+    .main-btn-img:not(:first-child){
+        display: none;
+    }
+}
+
+
+.bottom-card{
+    padding: 50px 30px;
+    gap: 1rem;
+    align-items: center;
+    h3{
+        text-transform: none;
+        color: $color-white;
+    }
+    .bootom-card-title{
+        text-align: center;
+        font-size: 0.8rem; 
+    }
+    .bottom-card-sub-title{
+        h3{
+            font-size: 0.5rem;
+            text-transform: uppercase;
+        }
+    }
+    .bottom-card{
+        background-color: black;
+    }
+    .bottom-card-content{
+        text-align: center;
+        p{
+            font-size: 0.8rem;
+            color: $color-white;
+        }
+    }
+
+}
+//Footer
+footer{
+    background-color: $color-black-primary;
+    .footer-content{
+        color: $color-white;
+        gap: 1rem;
+        article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .footer-art-top{
+                padding: 10px 100px;
+                text-align: center;
+                font-size: 0.7rem;
+            }
+            .footer-art-bottom{
+                font-size: 0.7rem;
+            }
+        }
+        .social-logo{
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .footer-content-bootom{
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .footer-copy-right{
+            padding-top: 1rem;
+            border-top: 1px solid $color-beige;
+            font-size: 0.8rem;
+            align-items: center;
+            a{
+                text-transform: none;
+                color: $color-white;
+            }
+        }
+    }
+
+    .flootiing-bongom{
+        span{
+        background-color: $color-blue-bootom;
+        position: fixed;
+        left: 15px;
+        bottom: 15px;
+        width: 35px;
+        border-radius: 50px;
+    }
+    }
+    .flootiing-call{
+        background-color: $color-blue-tel;
+        bottom: 0;
+        text-align: center;
     }
 }
