@@ -1,0 +1,107 @@
+@use '../abstracts/_variables' as *;
+.btn-yellow{
+    color: #fff;
+    background-color: $color-secondary;
+    text-transform: uppercase;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 3px solid $color-secondary;
+}
+
+.btn{
+    padding: 15px; 
+}
+
+.center{
+    text-align: center;
+}
+
+.txtred{
+    color: $color-secondary;
+}
+
+.object-live{
+    display: inline-block;
+    margin: 15px 0;
+    padding: 0 5px;
+    font-size: 15px;
+}
+
+.bg-card-left{
+    background-color: $color-image;
+}
+
+.border-rds{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.bx-shadow{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-bg-color-content{
+    background-color:$color-gray
+}
+
+.txt-barred{
+    text-decoration: line-through;
+    color: $color-muted;
+}
+
+.txt-green{
+    color: $color-green;
+    font-weight: bold;
+}
+
+.btn-link{
+    border: 2px solid $color-primary-light;
+    transition: 0.1s all  ease-in-out 0.1s;
+    border-radius: 50px;
+    padding: 10px 10px;
+    text-align: center;
+}
+.nav-signup{
+    background-color: $color-primary-light;
+    color: $color-white;
+    &:hover{
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+}
+.nav-signin{
+    &:hover{
+        border-color: $color-primary;
+        color: $color-primary;
+    }
+}
+.border-nav{
+    padding: 10px 10px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: border-width 0.3s ease, border-color 0.3s ease;
+    &:hover{
+        border-color: $color-primary-light;
+        // border-width: 6px;
+    }
+}
+
+.in-border{
+    border-color: $color-primary;
+    border-radius: 50px;
+    padding: 0 10px;
+}
+
+.connect-with{
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login-sign {
+    padding-top: 10px;
+    gap: 0.5rem;
+    font-size: 13px;
+    justify-content: center;
+}

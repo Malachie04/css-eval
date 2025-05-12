@@ -1,0 +1,127 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/mixins' as *;
+
+.admin-main{
+    height: 100vh;
+}
+
+
+.igrid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+  }
+  
+  .sidebar {
+    grid-column: span 2;
+    background-color: $admin-bg;
+  }
+  
+  .admin-main-content{
+   grid-column: span 10;
+   background-color: $color-white;
+  }
+  
+  .igrid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+  }
+  .tiny{
+    grid-column: span 3;
+  }
+
+  .small{
+    grid-column: span 4;
+  }
+  .big{
+    grid-column: span 6;
+  }
+
+  .vbig{
+    grid-column: 12;
+  }
+  .content-header{
+    // background-color: aquamarine;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid $color-gray;
+
+    .admin-icon{
+        height: 25px;
+    }
+  }
+  .admin-header-tilte{
+    // flex-basis: 40%;
+    margin-right: auto;
+  }
+
+  .admin-header-profil{
+    img{
+        max-height: 40px;
+    }
+  }
+
+  .img-card-size{
+    height: 20px;
+  }
+  .total-user{
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .content-stat{
+    padding: 0 10px;
+  }
+  .all-card-stat {
+    gap: 1rem;
+  }
+  .group-card{
+    // background-color: ;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+  }
+  .stat-card-title{
+    justify-content: space-between;
+  }
+
+  .admin-nav{
+    padding: 10px;
+    align-items: start;
+    &-content{
+      gap: 1rem;
+      transition: all 0.5s ease-in-out;
+    }
+    &-content:not(:first-child):hover{
+      transform: translateX(10px);
+    }
+  }
+  .active-user{
+    border-left:  1rem solid $color-green;
+  }
+  .blocked-user{
+    border-left:  1rem solid $color-error;
+  }
+  .active-panding{
+    border-left:  1rem solid $color-primary;
+  }
+
+  .content-details{
+    border-top: 2px solid $color-primary;
+    margin-top: 30px;
+    padding: 0 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1rem;
+    text-transform: none;
+  }
+
+  thead{
+    td{
+      font-weight: bold;
+    }
+  }

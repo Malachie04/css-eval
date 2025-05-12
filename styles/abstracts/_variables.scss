@@ -1,0 +1,47 @@
+// 🎨 Couleurs principales (exemple)
+$color-primary: #042E58;         // Bleu 
+$color-primary-heavy: #1c3249;   //Nazotinda
+$color-primary-light: #3B82F6; //Accent clair
+$color-secondary: #FACC15;       // Jaune d’accent
+$color-secondary-heavy: #f0cf4c; 
+$color-text: #1F2937;   
+$color-way:#faeddd;         // Gris très foncé (texte principal)
+$color-muted: #6B7280;           // Texte secondaire
+$color-bg: #F9FAFB;              // Fond clair
+$color-white: #FFFFFF;
+$color-gray: #F2F2F2;
+$color-yelow-light:#fcecdd;
+$color-dark-gray: #ffffff;
+$color-blue-light:#b3dafc;
+$color-error: #EF4444; 
+$color-green:#28a228;          // Rouge pour erreurs
+
+
+//Admin
+$admin-bg:#f4f5f7;
+
+//login
+$color-text-gray:#6c7377;
+$color-border-focus:#007bff;
+
+
+//Color-image
+$color-image: #fffef8; 
+// ✨ États
+$hover-brightness: 1.1;
+$active-brightness: 0.9;
+$disabled-opacity: 0.5;
+
+// ✍️ Typo
+$font-family: 'Nunito', sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// 📱 Breakpoints
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
