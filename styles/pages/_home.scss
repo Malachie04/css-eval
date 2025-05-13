@@ -21,14 +21,24 @@ a{
 }
 
 header{
-    height: 100vh;
-    background-color: $color-blue-primary;
+    
+    // background-color: $color-blue-primary;
     // background-color: chartreuse;
+    
     position: relative;
     justify-content:center ;
 
 }
 
+.video-background{
+    
+    video{
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+}
 .myVideo{
     height: 10px;
     width: 1px;
@@ -79,22 +89,33 @@ blockquote{
             }
         }
     }
-    .hustle{
-        align-items: center;
-        
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    a{
+        color: $color-black-primary !important;
     }
     @include desktop{
         left: 0;
         right: 0;
         margin: auto;
-        background-color:$color-blue-light ;
+        // background-color:$color-blue-light;
+       
         .burger-menu{
             display: none;
         }
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        
     }
+
+}
+
+.hustle{
+    position: absolute;
+    width: 80%;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    color: $color-white;
 
 }
 .myVideo{
@@ -110,11 +131,15 @@ blockquote{
         gap: 1rem;
         padding: 10px 0;
         .main-form-titl{
-            text-align: left;
+            
         }
         .trial{
             text-align: center;
             gap: 1rem;
+            @include desktop{
+                text-align: left;
+                
+            }
         }
     }
 }
@@ -129,12 +154,31 @@ blockquote{
 .unique-perspective{
     background-color: $color-blue-primary;
     padding-bottom: 30px;
+    .card{
+        @include desktop{
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        .card-left,.card-right{
+        flex-basis: 50%;
+}
+        }
+    }
+   
     .card-left{
         position: relative;
+        align-items: center;
+        width: 300px;
+       
         img{
             border-radius: 50%;
             border: 1rem solid $color-blue-light;
             margin: 30px 50px 10px 50px;
+            @include desktop{
+                width: 300px;
+            }
         }
         .lawyer-name{
             position: absolute;
@@ -152,18 +196,33 @@ blockquote{
     .card-right{
         gap: 1rem;
         padding:0 20px;
-        text-align: center;  
+        text-align: center;
+        @include desktop{
+            text-align: left;
+            justify-content: center;
+            padding-right: 110px;
+        }  
         h2,p,a{
             color: $color-white;
+            @include desktop{
+                font-size: 1.1rem;
+            }
         }
         a{
             text-transform: none;
             font-weight: normal;
             font-size: 0.7rem;
             letter-spacing: 2px;
+            @include desktop{
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
         }
         h2{
             font-size: 1.2rem;
+            @include desktop{
+                font-size: 2rem;
+            }
         }
 
     }
@@ -172,17 +231,33 @@ blockquote{
 .our-work{
     padding-top: 15px;
     padding-bottom: 15px;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.55)), url(../../image/bg-logo-faded-mark-400x400.png);
+    width: auto;
+    background-position: left top;
+    background-repeat: no-repeat;
+    
     .main-form-title{
         text-align: center;
+        @include desktop{
+            text-align: left;
+        }
     }
     .ouwer-work-content-top{
         text-align: center;
         padding: 10px 0;
+        @include desktop{
+            text-align: left;
+            padding: 30px 0;
+        }
     }
     .big-card {
         gap: 1rem;
     }
     .sm-card{
+        @include desktop{
+            grid-column: span 4;
+        }
         background-color: $color-beige;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         padding: 15px;
@@ -218,11 +293,26 @@ blockquote{
 .main-bottom-top{
     background-color: $color-blue-primary;
     justify-content: center;
+    @include desktop{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        img{
+            width: 100px;
+        }
+    }
     .main-btn-img:not(:first-child){
         display: none;
+        @include desktop{
+            display: block;
+        }
     }
 }
 
+.bottom-bottom{
+    @include desktop{
+        flex-direction: row;
+    }
+}
 
 .bottom-card{
     padding: 50px 30px;
@@ -235,11 +325,24 @@ blockquote{
     .bootom-card-title{
         text-align: center;
         font-size: 0.8rem; 
+        @include desktop{
+            text-align: left;
+            font-size: 1.2rem;
+        }
     }
     .bottom-card-sub-title{
         h3{
             font-size: 0.5rem;
             text-transform: uppercase;
+            @include desktop{
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .bottom-card-footer{
+        a:hover{
+            color: $color-black-primary;
+            background-color: $color-white;
         }
     }
     .bottom-card{
@@ -251,15 +354,32 @@ blockquote{
             font-size: 0.8rem;
             color: $color-white;
         }
+        @include desktop{
+            text-align: left;
+            p{
+                font-size: 1rem;
+                color: $color-white;
+            }
+        }
     }
 
 }
 //Footer
 footer{
     background-color: $color-black-primary;
-    .footer-content{
+    .footer-logo{
+         @include desktop{
+            img{
+                width: 400px;
+            }
+         }
+    }
+    .footer-contente{
         color: $color-white;
         gap: 1rem;
+        @include desktop{
+            flex-direction: row;
+        }
         article{
             display: flex;
             flex-direction: column;
@@ -273,26 +393,34 @@ footer{
                 font-size: 0.7rem;
             }
         }
-        .social-logo{
-            gap: 0.5rem;
-            justify-content: center;
-        }
-        .footer-content-bootom{
-            text-align: center;
-            font-size: 0.8rem;
-        }
-        .footer-copy-right{
-            padding-top: 1rem;
-            border-top: 1px solid $color-beige;
-            font-size: 0.8rem;
-            align-items: center;
-            a{
-                text-transform: none;
-                color: $color-white;
-            }
+
+    }
+    .social-logo{
+        gap: 0.5rem;
+        justify-content: center;
+        padding: 3rem 0;
+        color: $color-white;
+        @include desktop{
+            font-size: 1.5rem;
         }
     }
-
+    .footer-content-bootom{
+        text-align: center;
+        font-size: 0.8rem;
+        color: $color-white;
+    }
+    .footer-copy-right{
+        padding-top: 1rem;
+        border-top: 1px solid $color-beige;
+        font-size: 0.8rem;
+        align-items: center;
+        color: $color-white;
+        padding-bottom: 3rem;
+        a{
+            text-transform: none;
+            color: $color-white;
+        }
+    }
     .flootiing-bongom{
         span{
         background-color: $color-blue-bootom;
@@ -301,11 +429,17 @@ footer{
         bottom: 15px;
         width: 35px;
         border-radius: 50px;
+        z-index: 1;
     }
     }
     .flootiing-call{
         background-color: $color-blue-tel;
         bottom: 0;
         text-align: center;
+        position: fixed;
+        width: 100%;
+        @include desktop{
+            display: none;
+        }
     }
 }

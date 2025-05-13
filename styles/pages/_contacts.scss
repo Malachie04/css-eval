@@ -1,2 +1,85 @@
 @use '../abstracts/_variables' as *;
 @use '../abstracts/mixins' as *;
+
+.contact-main{
+    margin-top: 80px;
+    background-image: url('../../image/download.svg');
+}
+
+form{
+    gap: 0.5rem;
+}
+
+.names{
+    gap: 0.5rem;
+    input{
+        flex-basis: 50%;
+    }
+}
+
+.contact-big-card{
+    padding: 50px 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.mailPhone{
+    gap: 0.5rem;
+    input{
+        flex-basis: 50%;
+    }
+}
+.form-head{
+    text-align: center;
+    h3{
+        font-size: 2rem;
+    }
+}
+.warning{
+    font-size: 0.8rem;
+    font-style: italic;
+}
+.submint{
+    text-align: center;
+    button{
+        transition: all 0.3s ease-in-out;
+        background-color: $color-blue-primary;
+        color: $color-white;
+        border-radius: 5px;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-black-primary;
+        }
+    }
+}
+
+.mailPhone {
+    @include desktop{
+        flex-direction: row;
+    }
+}
+
+.attoney-main-card{
+    background-image: url('../../image/attoney-img2.svg');
+}
+.attoney-card{
+    span{
+        font-size: 0.7rem;
+    }
+}
+.attoney-card-top{
+    padding: 10px 20px;
+    background-color: $color-white;
+}
+.attonney-card-top-content{
+    justify-content: space-between;
+}
+.attonney-right{
+    color: $color-blue-primary;
+    border-left: 1px solid $color-blue-primary;
+    padding-left: 15px;
+}
+

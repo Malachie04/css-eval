@@ -1,2 +1,58 @@
 @use '../abstracts/_variables' as *;
 @use '../abstracts/mixins' as *;
+
+
+.attoney-main{
+    margin-top: 60px;
+    @include desktop{
+        margin-top: 100px;
+    }
+}
+
+.bottom{
+    gap: 1rem;
+}
+
+.attoney-card{
+    
+    @include desktop{
+        grid-column: span 3;
+    }
+}
+.main-top{
+    justify-content: center;
+    padding: 30px 0;
+    gap: 1rem;
+   
+    a{
+        background-color: $color-blue-primary;
+        color: $color-white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.7rem;
+        text-transform: none;
+        font-weight: normal;
+         @include desktop{
+            font-size: 1rem;
+        }
+        
+    }
+    
+}
+
+.attoney-name{
+    a:hover{
+        text-decoration: underline;
+    }
+}
+.attoney-number{
+    display: flex;
+    flex-direction: column;
+    a{
+        color: gray;
+    }
+    @include desktop{
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
