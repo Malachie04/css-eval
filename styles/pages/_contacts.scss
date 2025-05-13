@@ -4,10 +4,54 @@
 .contact-main{
     margin-top: 80px;
     background-image: url('../../image/download.svg');
+    position: relative;
+    padding: 40px;
+}
+
+form::before{
+    @include desktop{
+        margin: 10px 0;
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 5%;
+        height: 50px;
+        top: 0;
+        left: 0;
+        // background-color: $color-blue-primary;
+        z-index: -1;
+        transition: all 0.5s ease-in-out;
+        border-top:5px solid $color-blue-primary;
+        border-left:5px solid $color-blue-primary;
+    }
+    
+}
+
+form::after{
+    @include desktop{
+        margin: 10px 0;
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 5%;
+        height: 50px;
+        bottom: -30px;
+        right: 0;
+        // background-color: $color-blue-primary;
+        z-index: -1;
+        transition: all 0.5s ease-in-out;
+        border-bottom:5px solid $color-blue-primary;
+        border-right:5px solid $color-blue-primary;
+    }
 }
 
 form{
     gap: 0.5rem;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .names{
@@ -62,20 +106,21 @@ form{
     }
 }
 
-.attoney-main-card{
+.contact-main-card{
     background-image: url('../../image/attoney-img2.svg');
 }
-.attoney-card{
+.contact-card{
     span{
         font-size: 0.7rem;
     }
 }
-.attoney-card-top{
+.contact-card-top{
     padding: 10px 20px;
     background-color: $color-white;
 }
-.attonney-card-top-content{
+.contact-card-top-content{
     justify-content: space-between;
+    background-color: $color-white;
 }
 .attonney-right{
     color: $color-blue-primary;

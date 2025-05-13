@@ -33,10 +33,11 @@ header{
 .video-background{
     
     video{
+        position: relative;
         height: 100vh;
         width: 100%;
         object-fit: cover;
-        
+        z-index: -1;
     }
 }
 .myVideo{
@@ -48,13 +49,11 @@ header{
 .img-logo{
     width: 150px;
     @include desktop{
-       width: 300px; 
+       width: 280px; 
     }
 }
 
-.fa-solid{
-    
-}
+
 blockquote{
     font-size: 1.2rem;
     text-align: center;
@@ -63,6 +62,7 @@ blockquote{
     gap: 1rem;
 }
 
+
 .header-nav{
     padding: 10px;
     position: relative;
@@ -70,18 +70,29 @@ blockquote{
     top: 0;  
     width: 100%;
     background-color: $color-white;
-    z-index: 999;
+    // background-color: transparent;
+    z-index: 99;
     .logo-nav{
         justify-content: space-between;   
     }
     .nav-right{
         display: none;
+        
+        .last-link{
+            background-color: $color-blue-primary;
+            color: $color-white !important;
+            padding: 1px 5px;
+            border-radius: 5px;
+            text-align: center;
+        }
         @include desktop{
             display: flex;
             padding: 0 30px;
             gap: 2rem;
             a{
                 color: $color-white;
+                text-transform: none;
+                font-weight: normal;
             }
             margin-left: auto;
             .loop-header{
@@ -107,16 +118,54 @@ blockquote{
         align-items: center;
         
     }
-
+    
 }
 
 .hustle{
     position: absolute;
     width: 80%;
-    top: 50%; right: 50%;
+    top: 50%; 
+    right: 50%;
     transform: translate(50%,-50%);
+    z-index: 333;
     color: $color-white;
+    .header-links{
+        display: none;
+    }
+    @include desktop{
+        width: 30%;
+        h1{
+            font-size: 3rem;
+        }
+        .header-links{
+            display: flex;
+            gap: 1rem;
+            a:hover{
+             
+                    background-color: $color-black-primary;
+               
+            }
+        }
+    }
 
+}
+.contact-home{
+    padding: 5px 10px;
+    color: $color-white !important;
+    background-color: $color-blue-primary;
+    border-radius: 5px;
+    &:hover{
+        background-color: $color-blue-primary-opacified;
+    }
+}
+.more-home{
+    padding: 5px 50px;
+    color: $color-white !important;
+    background-color: $color-black-primary;
+    border-radius: 5px;
+    &:hover{
+        background-color: $color-blue-primary-opacified;
+    }
 }
 .myVideo{
     height: 100%;
@@ -144,7 +193,14 @@ blockquote{
     }
 }
 
+.inside{
+    @include desktop{
+        flex-direction: row;
+    }
+}
 .main-from {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.55)), url(../../image/shutterstock_24138433091);
+
     @include desktop{
         flex-direction: row;
         align-items: center;
@@ -228,14 +284,35 @@ blockquote{
     }
 }
 
-.our-work{
-    padding-top: 15px;
-    padding-bottom: 15px;
+.sm-card-footer{
+    position: relative;
+}
+.sm-card-footer::before{
+    margin: 10px 0;
+    display: block;
+    content: '';
+    position: relative;
+    bottom: 0;
+    width: 20%;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    z-index: 333;
+    transition: all 0.5s ease-in-out;
+}
 
+.main-wall{
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.55)), url(../../image/bg-logo-faded-mark-400x400.png);
     width: auto;
     background-position: left top;
     background-repeat: no-repeat;
+}
+.our-work{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    
     
     .main-form-title{
         text-align: center;
@@ -270,8 +347,18 @@ blockquote{
                 letter-spacing: 2px;
             }
         }
-
-        
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            transform: translateY(-10px);
+        }
+        &:hover p{
+            color: $color-blue-primary;
+            
+        }
+        &:hover .sm-card-footer::before{
+            background-color: $color-blue-primary;
+            width: 100%;
+        }
         
     }
     .sm-card:last-child{
@@ -366,7 +453,7 @@ blockquote{
 }
 //Footer
 footer{
-    background-color: $color-black-primary;
+    background-color: $color-fotter;
     .footer-logo{
          @include desktop{
             img{
